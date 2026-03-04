@@ -1,14 +1,23 @@
 {
   "name": "swiftshop-backend",
   "version": "1.0.0",
+  "description": "E-commerce backend with MongoDB, Express, and JWT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "mongodb",
+    "ecommerce",
+    "jwt"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
@@ -17,5 +26,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^6.21.0",
     "mongoose": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
