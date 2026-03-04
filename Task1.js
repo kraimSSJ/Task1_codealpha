@@ -1,5 +1,5 @@
 // Mock Database
-const products = [
+let products = [
             { id: 1, name: "Premium Leather Watch", price: 199.99, category: "Electronics", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800", desc: "A sophisticated timepiece featuring genuine Italian leather and Swiss movement precision." },
             { id: 2, name: "Noise Cancelling Headphones", price: 299.00, category: "Electronics", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800", desc: "Pure sound, zero distraction. Industry-leading noise cancellation for your commute or focus." },
             { id: 3, name: "Minimalist Linen Shirt", price: 75.00, category: "Apparel", image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800", desc: "Breathable, sustainable, and stylish. Perfect for warm days and smart-casual evenings." },
