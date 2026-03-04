@@ -10,7 +10,7 @@ let orders = [];
 window.onload = async () => {
     try {
         // 1. Fetch data from our Node.js server
-        const response = await fetch('https://task1codealpha-production.up.railway.app/api/products');
+        const response = await fetch('https://task1codealpha-production-e12c.up.railway.app/api/products');
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -82,7 +82,7 @@ function renderProducts(items) {
 async function filterCategory(cat) {
     try {
         // We call the backend with ?category=Electronics (or Apparel, etc.)
-        const response = await fetch(`https://task1codealpha-production.up.railway.app/api/products?category=${encodeURIComponent(cat)}`);
+        const response = await fetch(`https://task1codealpha-production-e12c.up.railway.app/api/products?category=${encodeURIComponent(cat)}`);
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
@@ -108,7 +108,7 @@ async function searchProducts(query) {
         }
         
         // We add "?search=word" to the end of the URL
-        const response = await fetch(`https://task1codealpha-production.up.railway.app/api/products?search=${encodeURIComponent(query)}`);
+        const response = await fetch(`https://task1codealpha-production-e12c.up.railway.app/api/products?search=${encodeURIComponent(query)}`);
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
@@ -236,7 +236,7 @@ async function processCheckout() {
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
     try {
-        const response = await fetch('https://task1codealpha-production.up.railway.app/api/orders', {
+        const response = await fetch('https://task1codealpha-production-e12c.up.railway.app/api/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -318,7 +318,7 @@ async function handleAuth(event, type) {
 
     try {
         // We tell the backend to "Register" or "Login"
-        const response = await fetch(`https://task1codealpha-production.up.railway.app/api/auth/${type}`, {
+        const response = await fetch(`https://task1codealpha-production-e12c.up.railway.app/api/auth/${type}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password })
@@ -392,7 +392,7 @@ async function fetchUserOrders() {
     if (!currentUser) return;
     
     try {
-        const response = await fetch(`https://task1codealpha-production.up.railway.app/api/orders/${encodeURIComponent(currentUser.email)}`);
+        const response = await fetch(`https://task1codealpha-production-e12c.up.railway.app/api/orders/${encodeURIComponent(currentUser.email)}`);
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
