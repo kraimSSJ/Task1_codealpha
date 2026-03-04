@@ -9,7 +9,7 @@ const app = express();
 
 // ===== CORS FIRST - BEFORE EVERYTHING =====
 app.use(cors());
-app.options('*', cors());
+
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
