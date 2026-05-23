@@ -28,7 +28,7 @@ let orders = [];
 window.onload = async () => {
     try {
         // 1. Fetch data from our Node.js server
-        const response = await fetch('https://task1codealpha-production-e12c.up.railway.app/api/products');
+        const response = await fetch('https://task1-codealpha-git-master-ayoub-kraims-projects.vercel.app');
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
